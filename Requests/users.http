@@ -1,0 +1,26 @@
+@Host = https://localhost:7243/api
+@AccessToken = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IlNhbWlyIE5hYmlsIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJpYXQiOiIxNjYzMTQ2Njk5IiwiZXhwIjoxNjYzMjMzMDk5LCJpc3MiOiJTYW1pciBOYWJpbCIsImF1ZCI6IlNhbWlyIE5hYmlsIn0.660MGoLW3CQgwkqN7TSBzSWBc22hyD-OfrChW8t5JHYbgeqGChvpnzp9upLHfykhjEo1DMKYaqP9FLRsshDbyg
+
+GET {{Host}}/users
+Authorization: Bearer {{AccessToken}}
+
+###
+POST {{Host}}/users
+Content-Type: application/json
+
+{
+    "name" : "Samir Nabil",
+    "Email" : "samir@gmail.com",
+    "Username" : "sameervirus",
+    "Password" : "4028600",
+    "role" : 1
+}
+
+###
+POST {{Host}}/users/login
+Content-Type: application/json
+
+{
+    "Username" : "sameervirus",
+    "Password" : "4028600"
+}

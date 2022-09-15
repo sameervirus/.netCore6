@@ -1,0 +1,13 @@
+@Host = https://localhost:7243/api
+@AccessToken = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IlNhbWlyIE5hYmlsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvYXV0aG9yaXphdGlvbmRlY2lzaW9uIjoiU3VwZXIgQWRtaW4iLCJpYXQiOiIxNjYzMjI4OTI4IiwiZXhwIjoxNjYzMzE1MzI4LCJpc3MiOiJTYW1pciBOYWJpbCIsImF1ZCI6IlNhbWlyIE5hYmlsIn0.qFv5rN3-LdbI-ZfjmDyZSuWDvy_SdFTac4qz3oDMix8_hSY_whk7-9BXAQAIrjRqUStlJRjRxu1swM_qLw3zlg
+
+GET {{Host}}/roles
+
+###
+POST {{Host}}/roles
+Content-Type: application/json
+Authorization: Bearer {{AccessToken}}
+
+{
+    "Name": "Editor2"
+}
